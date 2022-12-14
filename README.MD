@@ -5,7 +5,7 @@
 https://colab.research.google.com/
 
 ### Создать блокнот и в него  вставить код
-1)
+1) 
 ![img.png](img.png)
 2)
 ![img_1.png](img_1.png)

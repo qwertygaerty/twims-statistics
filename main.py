@@ -13,10 +13,10 @@ odds = []
 relative_odds = []
 arr_density = []
 arr_distribution = []
-intervals = []
-intervals_average = []
 count_of_range = []
 odds_range = []
+intervals = []
+intervals_average = []
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -100,7 +100,7 @@ def get_intervals(array):
     print(df)
 
 
-def get_histogramm_relative():
+def get_histogram_relative():
     mplt.figure(figsize=(10, 5))
     mplt.bar(intervals, odds_range)
     mplt.title('Гистрогамма')
@@ -114,7 +114,7 @@ def get_polygon_relative_odds():
     mplt.show()
 
 
-def get_labrotory_work():
+def start():
     print('Массив из 100 элементов:')
     for i in range(10):
         print(arr[i * 10:(i + 1) * 10])
@@ -139,8 +139,8 @@ def get_labrotory_work():
     print(f'\nКоличество интервалов:{round(1 + 3.222 * math.log(100, 10))}\n')
     print(f'\nh:{round(max(arr) / round(1 + 3.222 * math.log(100, 10)) * 10) / 10}\n')
     get_intervals(arr)
-    get_histogramm_relative()
+    get_histogram_relative()
     get_polygon_relative_odds()
 
 
-get_labrotory_work()
+start()
