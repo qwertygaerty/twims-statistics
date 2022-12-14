@@ -131,7 +131,7 @@ def start():
     print(f'\nМедиана:\n{median(arr)}')
     print(f'\nМода:\n{mode(arr)}')
     print('\nФункция распределения и плотности через функция распределения Пуассона:\n')
-    print('\nПри лямбда равное 4:')
+    print('\nλ=4')
     get_distribution_position()
     get_theoretical_plot()
     print('\nПолигон Частот:\n')
