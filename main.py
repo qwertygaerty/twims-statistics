@@ -8,6 +8,8 @@ from scipy.stats import poisson
 arr = random.choices(range(0, 10), k=100)
 options = range(0, 10)
 
+lambda_const = 4
+
 counts = []
 odds = []
 relative_odds = []
@@ -50,12 +52,12 @@ def get_plot():
 
 
 def get_distribution_position():
-    arr_distribution.append(poisson.pmf(k=0, mu=4))
+    arr_distribution.append(poisson.pmf(k=0, mu=lambda_const))
     for i in options[:-1]:
-        arr_distribution.append(arr_distribution[i] + poisson.pmf(k=i, mu=4))
+        arr_distribution.append(arr_distribution[i] + poisson.pmf(k=i, mu=lambda_const))
 
     for i in options:
-        arr_density.append(poisson.pmf(k=i, mu=4))
+        arr_density.append(poisson.pmf(k=i, mu=lambda_const))
 
     df = pd.DataFrame({'функция распределения': arr_distribution, 'плотность': arr_density})
     df = df.set_index([pd.Index(options)])
