@@ -39,8 +39,8 @@ def get_sheet(array):
 
 
 def get_plot():
-    fig = mplt.figure(figsize=(10, 6))
-    ax = fig.add_subplot()
+    figure = mplt.figure(figsize=(10, 6))
+    ax = figure.add_subplot()
     for i in options[1:]:
         mplt.plot(options[i - 1:i + 1], [relative_odds[i - 1], relative_odds[i - 1]])
     mplt.plot([-1, 0], [0, 0])
@@ -59,7 +59,7 @@ def get_distribution_position():
 
     df = pd.DataFrame({'функция распределения': arr_distribution, 'плотность': arr_density})
     df = df.set_index([pd.Index(options)])
-    print(df, '\n\n')
+    print(df, '\n')
 
 
 def get_theoretical_plot():
