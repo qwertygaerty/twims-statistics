@@ -66,7 +66,7 @@ def get_distribution_position():
 
 def get_theoretical_plot():
     mplt.plot(options, arr_distribution, label="функция распределения", c='blue')
-    mplt.bar(options, arr_density, label='плотность')
+    mplt.plot(options, arr_density, label='плотность')
     mplt.grid(axis='y')
     mplt.legend()
     mplt.show()
